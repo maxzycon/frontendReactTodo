@@ -1,29 +1,29 @@
 import React from "react";
 import { Link, Route, Routes } from "react-router-dom";
+import Homepage from "./pages/Homepage";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+
+/**
+ * router list todo
+ * TODO: make login router
+ * TODO: make register router
+ * TODO: make profile router
+ * TODO: make dashboard router
+ * TODO: make category router
+ * TODO: make todo router
+ */
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Homepage />} />
+        <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
         <Route path="about" element={<About />} />
       </Routes>
     </div>
-  );
-}
-
-// App.js
-function Home() {
-  return (
-    <>
-      <main>
-        <h2>Welcome to the homepage!</h2>
-        <p>You can do this, I believe in you.</p>
-      </main>
-      <nav>
-        <Link to="/about">About</Link>
-      </nav>
-    </>
   );
 }
 
